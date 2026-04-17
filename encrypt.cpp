@@ -16,6 +16,7 @@ int index(char letter, vector<char> key){
 int main(){
     string plain_text = "";
     string cipher_text = "";
+    string decrpyt = "";
     int ind = 0;
     bool random_key = true;
 
@@ -67,11 +68,12 @@ int main(){
     cout<<"encrypted message: "<<cipher_text<<"\n\n";
 
     cout<<"Message to decrypt: ";
-    getline(cin, plain_text);
+    getline(cin, decrpyt);
 
     plain_text = "";
 
-    for(char n:cipher_text){
+
+    for(char n:decrpyt){
         ind = index(n, key);
         if(ind < 0){
             cout<<"Invalid\n";
@@ -80,7 +82,7 @@ int main(){
         plain_text += chars[ind];
     }
 
-    cout<<"\nentered message: "<<cipher_text<<'\n';
+    cout<<"\nentered message: "<<decrpyt<<'\n';
     cout<<"encrypted message: "<<plain_text<<'\n';
     
 
