@@ -4,8 +4,8 @@
 #include <random>
 using namespace std;
 
-int index(char letter, vector<char> key){
-    for(int i=0; i<key.size(); i++){
+int index(char letter, vector<char>& key){
+    for(int i=0; i<key.size(); ++i){
         if(key.at(i) == letter){
             return i;
         }
